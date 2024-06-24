@@ -1,0 +1,52 @@
+{
+  "userList": [
+    {
+      "id": 0,
+      "userId": 0,
+      "userName": "",
+      "fName": "",
+      "lName": "",
+      "city": "",
+      "state": "",
+      "zipCode": ""
+    },
+    {
+      "id": 0,
+      "userId": 0,
+      "userName": "",
+      "fName": "ftffyugu",
+      "lName": "",
+      "city": "",
+      "state": "",
+      "zipCode": ""
+    }
+  ],
+  "cityList": [
+    {
+      "id": "1",
+      "name": "Recanto das Emas"
+    },
+    {
+      "id": "2",
+      "name": "Niterói"
+    },
+    {
+      "id": "3",
+      "name": "Guarulhos"
+    }
+  ],
+  "stateList": [
+    {
+      "id": "1",
+      "name": "DF"
+    },
+    {
+      "id": "2",
+      "name": "RJ"
+    },
+    {
+      "id": "3",
+      "name": "SP"
+    }
+  ]
+}
