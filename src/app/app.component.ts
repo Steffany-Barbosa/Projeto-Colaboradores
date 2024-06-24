@@ -58,15 +58,22 @@ export class AppComponent implements OnInit {
   }
 
   onSaveUser() {
-    this.http.post<USER>("http://localhost:3000/userList", this.userObj).subscribe((res: USER) => {
-      alert("User Created Successfully");
-      this.userList.unshift(this.userObj);
-      this.userObj = new USER(); // Reset the form
+    const newUser = { 
+      ...this.userObj, 
+      id: Math.floor(Math.random() * 1000000),  // Gera um id aleatório
+      userId: Math.floor(Math.random() * 1000000)  // Gera um userId aleatório
+    }; 
+
+    this.http.post<USER>("http://localhost:3000/userList", newUser).subscribe((res: USER) => {
+      alert("Criado com sucesso");
+      this.userList.unshift(res); // Adiciona o usuário criado com o id gerado automaticamente
+       // Limpa o formulário após salvar
     });
   }
 
   onEdit(data: USER) {
     this.userObj = data;
+    this.mostrarNovoUsuario = true; // Mostra a seção de Novo Usuário
   }
 
   onDelete(id: number) {
@@ -76,11 +83,12 @@ export class AppComponent implements OnInit {
         alert("Deletado com sucesso");
         this.userList = this.userList.filter(user => user.id !== id); // filtra pelo campo correto
       },
-      (error) => {
-        console.error("Erro ao deletar usuário", error)
-      });
+    (error)=> {
+      console.error("Erro ao deletar usuário", error)
+    });
     }
   }
+  
 }
 
 export class USER {
@@ -93,13 +101,13 @@ export class USER {
   zipCode: string;
   id: number
   constructor() {
-    this.userId = 0;
+    this.userId = 0+1;
     this.userName = '';
     this.fName = '';
     this.lName = '';
     this.city = '';
     this.state = '';
     this.zipCode = '';
-    this.id = 0;
+    this.id = 0+1;
   }
 }
