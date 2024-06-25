@@ -2,16 +2,6 @@
   "userList": [
     {
       "id": "1",
-      "userId": 1,
-      "userName": "",
-      "fName": "steffany",
-      "lName": "",
-      "city": "",
-      "state": "",
-      "zipCode": ""
-    },
-    {
-      "id": "1",
       "userId": 2,
       "userName": "",
       "fName": "steh",
@@ -21,27 +11,7 @@
       "zipCode": ""
     },
     {
-      "id": "335474",
-      "userId": 121541,
-      "userName": "",
-      "fName": "nero",
-      "lName": "",
-      "city": "",
-      "state": "",
-      "zipCode": ""
-    },
-    {
-      "id": "359861",
-      "userId": 797944,
-      "userName": "",
-      "fName": "dsdsd",
-      "lName": "",
-      "city": "",
-      "state": "",
-      "zipCode": ""
-    },
-    {
-      "id": 392715,
+      "id": "392715",
       "userId": 492591,
       "userName": "",
       "fName": "zyra",
@@ -49,6 +19,12 @@
       "city": "",
       "state": "DF",
       "zipCode": ""
+    },
+    {
+      "id": 727617,
+      "fName": "pipoca",
+      "lName": "haha",
+      "userId": 667949
     }
   ],
   "cityList": [

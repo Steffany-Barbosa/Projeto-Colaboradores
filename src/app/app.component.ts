@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  userObj: USER = new USER();
+  userObj: Partial<USER> = {};
   http = inject(HttpClient);
 
   cityList$: Observable<City[]> = new Observable<City[]>();
@@ -87,6 +87,10 @@ export class AppComponent implements OnInit {
       console.error("Erro ao deletar usuário", error)
     });
     }
+  }
+
+  clearForm(): void {
+    this.userObj = { fName: '', lName: '', userName: '', city: '', state: '' };
   }
   
 }
